@@ -1,6 +1,7 @@
 import React from 'react';
-//import user from '../user.json';
+
 import defaultImg from '../components/logo.svg'
+import PropTypes from 'prop-types'
 
 
 const Profile = ({name, avatar, tag, location, stats}) => {
@@ -9,7 +10,7 @@ const Profile = ({name, avatar, tag, location, stats}) => {
      <div >
   <div >
     <img
-      src={defaultImg}
+      src={avatar}
       alt="Аватар пользователя"
       
     />
@@ -37,7 +38,20 @@ const Profile = ({name, avatar, tag, location, stats}) => {
 }
 
 Profile.defaultProps = {
-  avatar: "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg"
+  avatar: defaultImg
+
+}
+
+Profile.propTypes = {
+  avatar:PropTypes.string,
+  name: PropTypes.string.isRequired,
+  tag:PropTypes.string.isRequired,
+  location:PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 
 }
 export default Profile;
