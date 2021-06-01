@@ -1,7 +1,7 @@
 .statistics {
 	display: inline-block;
 	width: 335px;
-	margin: auto;
+	margin: 15px;
 	border: solid 1px rgb(211, 221, 221);
 	background-color: #fff;
 }

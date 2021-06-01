@@ -6,8 +6,7 @@ const Statistics = ({ title, stats }) => {
 	const colors = ['#7CB9E8', '#B284BE', '#F19CBB', '#FFBF00', '#7FFFD4'];
 	return (
 		<section className={styles.statistics}>
-			<h2 className={styles.title}>{title}</h2>
-
+			{title ? <h2 className={styles.title}>{title}</h2> : ''}
 			<ul className={styles.statList}>
 				{stats.map((stat, index) => (
 					<li
@@ -23,9 +22,12 @@ const Statistics = ({ title, stats }) => {
 		</section>
 	);
 };
+Statistics.defaultProps = {
+	title: '',
+};
 
 Statistics.propTypes = {
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 	stats: PropTypes.arrayOf(
 		PropTypes.shape({
 			id: PropTypes.string.isRequired,
