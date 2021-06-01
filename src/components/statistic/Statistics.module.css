@@ -22,10 +22,11 @@
 
 .item {
 	width: 70px;
-	border: solid 1px teal;
+	border: solid 1px rgb(207, 221, 221);
 }
 
 .label {
+	font-weight: 500;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	display: flex;

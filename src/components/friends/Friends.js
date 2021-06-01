@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultImg from './superman.png';
+import defaultImg from './logo.svg';
 import PropTypes from 'prop-types';
 import styles from './Friends.module.css';
 

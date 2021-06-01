@@ -1,6 +1,6 @@
 import React from 'react';
 
-import defaultImg from './logo.svg';
+import defaultImg from './superman.png';
 import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 
@@ -9,7 +9,7 @@ const Profile = ({ name, avatar, tag, location, stats }) => {
 		<div className={styles.profile}>
 			<div className={styles.description}>
 				<img src={avatar} alt="Аватар пользователя" className={styles.avatar} />
-				<p className={styles.name}>Name:{name}</p>
+				<p className={styles.name}>Name: {name}</p>
 				<p className={styles.tag}>@{tag}</p>
 				<p className={styles.location}>{location}</p>
 			</div>
